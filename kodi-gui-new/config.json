@@ -15,8 +15,7 @@
     "/dev/bus:/dev/bus:rwm",
     "/dev/vcio:/dev/vcio:rwm",
     "/dev/vcsm:/dev/vcsm:rwm",
-    "/dev/vc-mem:/dev/vc-mem:rwm"    
-  ],
+    "/dev/vc-mem:/dev/vc-mem:rwm"],
   "privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
   "full_access": "true",
   "map": ["share:rw"],
