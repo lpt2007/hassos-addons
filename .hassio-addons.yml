@@ -1,0 +1,9 @@
+---
+channel: stable
+addons:
+  kodi-gui:
+    repository: hassio-addons/kodi-gui
+    target: kodi-gui
+  kodi-gui-new:
+    repository: hassio-addons/kodi-gui-new
+    target: kodi-gui-new
