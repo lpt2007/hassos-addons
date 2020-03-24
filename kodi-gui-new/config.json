@@ -1,6 +1,6 @@
 {
   "name": "KODI-GUI-NEW",
-  "version": "0.1a",
+  "version": "0.1.5a",
   "slug": "kodi-new",
   "description": "KODI 18.5 media center add-on!",
   "arch": ["armhf", "armv7"],
@@ -15,7 +15,8 @@
     "/dev/bus:/dev/bus:rwm",
     "/dev/vcio:/dev/vcio:rwm",
     "/dev/vcsm:/dev/vcsm:rwm",
-    "/dev/vc-mem:/dev/vc-mem:rwm"],
+    "/dev/vc-mem:/dev/vc-mem:rwm"    
+  ],
   "privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
   "full_access": "true",
   "map": ["share:rw"],
