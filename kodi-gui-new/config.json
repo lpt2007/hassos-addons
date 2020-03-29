@@ -6,6 +6,9 @@
   "arch": ["armhf", "armv7"],
   "startup": "before",
   "boot": "auto",
+  "ports": {
+    "8080/tcp": 8080
+  },
   "devices": [
     "/dev/fb0:/dev/fb0:rwm",
     "/dev/vchiq:/dev/vchiq:rwm",
