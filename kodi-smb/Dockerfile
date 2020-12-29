@@ -40,17 +40,17 @@ MAINTAINER lpt2007 <mohyat@gmail.com>
 #gldriver-test
 #libbgl1-mesa-dri
 #
-#RUN apt-get install -y --no-install-recommends xserver-xorg xinit \
+#RUN apt-get clean && apt-get update && apt-get install -y \
 #     fbset \
 #     libraspberrypi0 \
 #     xserver-xorg-legacy \
 #     dbus-x11 \
 #     sudo \
-#     cifs-utils \
+     cifs-utils
 #     jq \
 #     nano
 ### install kodi     
-RUN apt-get clean && apt-get update && apt-get install -y kodi
+RUN apt-get install -y kodi
 #
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
