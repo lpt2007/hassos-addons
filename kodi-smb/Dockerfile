@@ -40,8 +40,17 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y
 #gldriver-test
 #libbgl1-mesa-dri
 #
+RUN apt-get install -y --no-install-recommends xserver-xorg xinit \
+     fbset \
+#     libraspberrypi0 \
+     xserver-xorg-legacy \
+     dbus-x11 \
+#     sudo \
+     cifs-utils \
+     jq \
+     nano
 ### install kodi     
-RUN apt-get clean && apt-get update && apt-get install -y kodi
+RUN apt-get install -y kodi
 #
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
