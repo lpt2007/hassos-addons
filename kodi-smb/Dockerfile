@@ -1,4 +1,4 @@
-FROM homeassistant/armhf-base-raspbian
+FROM homeassistant/armhf-base-raspbian:buster
 #balenalib/raspberry-pi-debian
 #homeassistant/armhf-base-raspbian
 #b01t/raspbian:latest
@@ -7,14 +7,14 @@ MAINTAINER lpt2007 <mohyat@gmail.com>
 ##
 ### copy repository file and activate sources
 #homeassistant/armhf-base-raspbian
-RUN apt-get update && apt-get install -y wget
-COPY /etc/apt/sources.list /etc/apt/sources.list
-RUN chmod +x /etc/apt/sources.list
-RUN wget https://archive.raspbian.org/raspbian.public.key -O - | apt-key add -
-RUN wget https://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | apt-key add -
+#RUN apt-get update && apt-get install -y wget
+#COPY /etc/apt/sources.list /etc/apt/sources.list
+#RUN chmod +x /etc/apt/sources.list
+#RUN wget https://archive.raspbian.org/raspbian.public.key -O - | apt-key add -
+#RUN wget https://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | apt-key add -
 ##
 ### install minimal dependencies
-RUN apt-get clean && apt-get update && apt-get upgrade -y 
+#RUN apt-get clean && apt-get update && apt-get upgrade -y 
 #&& apt-get install -y --no-install-recommends xserver-xorg xinit \
 #     fbset \
 #     libraspberrypi0 \
@@ -40,17 +40,17 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y
 #gldriver-test
 #libbgl1-mesa-dri
 #
-RUN apt-get install -y --no-install-recommends xserver-xorg xinit \
-     fbset \
+#RUN apt-get install -y --no-install-recommends xserver-xorg xinit \
+#     fbset \
 #     libraspberrypi0 \
-     xserver-xorg-legacy \
-     dbus-x11 \
+#     xserver-xorg-legacy \
+#     dbus-x11 \
 #     sudo \
-     cifs-utils \
-     jq \
-     nano
+#     cifs-utils \
+#     jq \
+#     nano
 ### install kodi     
-RUN apt-get install -y kodi
+RUN apt-get clean && apt-get update && apt-get install -y kodi
 #
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
