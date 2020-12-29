@@ -41,7 +41,7 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y
 #libbgl1-mesa-dri
 #
 ### install kodi     
-#RUN apt-get install -y kodi
+RUN apt-get clean && apt-get update && apt-get install -y kodi
 #
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
