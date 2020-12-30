@@ -5,7 +5,7 @@ MAINTAINER lpt2007 <mohyat@gmail.com>
 ### install minimal dependencies
 ##
 RUN apt-get clean && apt-get update && apt-get install -y \
-#     fbset \
+     fbset \
 #     libraspberrypi0 \
 #     xserver-xorg-legacy \
 #     dbus-x11 \
