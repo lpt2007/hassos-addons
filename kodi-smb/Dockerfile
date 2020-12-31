@@ -22,7 +22,7 @@ RUN wget https://archive.raspbian.org/raspbian.public.key -O - | apt-key add -
 RUN wget https://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | apt-key add -
 ##
 ### install kodi     
-RUN apt-get install -y kodi
+#RUN apt-get install -y kodi
 #
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
