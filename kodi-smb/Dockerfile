@@ -10,9 +10,9 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
 #     xserver-xorg-legacy \
 #     dbus-x11 \
 #     sudo \
-     cifs-utils
+     cifs-utils \
 #     jq \
-#     nano
+     nano
 ##
 ### copy repository file and activate sources
 #RUN apt-get update && apt-get install -y wget
