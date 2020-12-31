@@ -4,7 +4,7 @@ MAINTAINER lpt2007 <mohyat@gmail.com>
 ##
 ### install minimal dependencies
 ##
-RUN apt-get clean && apt-get update && apt-get install -y \
+RUN apt-get clean && apt-get update && apt-get upgrade && apt-get install -y \
 #     fbset \
 #     libraspberrypi0 \
 #     xserver-xorg-legacy \
