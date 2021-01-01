@@ -12,7 +12,7 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
      nano
 ##
 ### install kodi     
-#RUN apt-get install -y kodi
+RUN apt-get install -y kodi
 #
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
