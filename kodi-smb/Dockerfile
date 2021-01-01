@@ -2,20 +2,21 @@ FROM homeassistant/armhf-base-raspbian:buster
 ##
 MAINTAINER lpt2007 <mohyat@gmail.com>
 ##
-### copy repository file and activate sources
-RUN apt-get update && apt-get install -y wget
-COPY /etc/apt/sources.list /etc/apt/sources.list
-RUN chmod +x /etc/apt/sources.list
-RUN wget https://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | apt-key add
-##
 ### install minimal dependencies
 RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y \
      cifs-utils \
+     wget \
      nano
 ##
 ### install kodi     
 RUN apt-get install -y kodi
-#
+##
+### copy repository file and activate sources and upgrade files
+COPY /etc/apt/sources.list /etc/apt/sources.list
+RUN chmod +x /etc/apt/sources.list
+RUN wget https://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | apt-key add
+RUN apt-get update && apt-get upgrade -y
+##
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
 #RUN cd /tmp && git clone http://github.com/raspberrypi/userland && sed -i 's/set(INSTALL_TARGETS "${INSTALL_TARGETS} vcilcs")/set(INSTALL_TARGETS ${INSTALL_TARGETS} vcilcs)/g' /tmp/userland/interface/vmcs_host/CMakeLists.txt && cd userland && ./buildme
