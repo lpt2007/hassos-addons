@@ -16,13 +16,13 @@ RUN apt-get update
 #&& apt-get upgrade -y
 ##
 ### install kodi     
-RUN apt-get install -y kodi
+#RUN apt-get install -y kodi
 ##
 ### copy repository file and activate sources and upgrade files
-COPY /etc/apt/sources.list /etc/apt/sources.list
-RUN chmod +x /etc/apt/sources.list
-RUN wget https://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | apt-key add
-RUN apt-get update && apt-get upgrade -y
+#COPY /etc/apt/sources.list /etc/apt/sources.list
+#RUN chmod +x /etc/apt/sources.list
+#RUN wget https://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | apt-key add
+#RUN apt-get update && apt-get upgrade -y
 ##
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
