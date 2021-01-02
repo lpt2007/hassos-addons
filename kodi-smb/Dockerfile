@@ -1,4 +1,5 @@
-FROM homeassistant/armv7-base-debian:buster
+FROM homeassistant/armv7-base-debian:bullseye 
+#homeassistant/armv7-base-debian:buster
 #homeassistant/armhf-base-raspbian:buster
 ##
 MAINTAINER lpt2007 <mohyat@gmail.com>
