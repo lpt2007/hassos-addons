@@ -1,4 +1,5 @@
-FROM homeassistant/armhf-base-raspbian:buster
+FROM b01t/raspbian
+#homeassistant/armhf-base-raspbian:buster
 ##
 MAINTAINER lpt2007 <mohyat@gmail.com>
 ##
@@ -10,13 +11,13 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
 ##
 ##
 ### copy repository file and activate sources and upgrade files
-RUN echo "deb http://pipplware.pplware.pt/pipplware/dists/buster/main/binary /" >> /etc/apt/sources.list
-RUN wget http://pipplware.pplware.pt/pipplware/key.asc -O - | apt-key add
-RUN apt-get update
+#RUN echo "deb http://pipplware.pplware.pt/pipplware/dists/buster/main/binary /" >> /etc/apt/sources.list
+#RUN wget http://pipplware.pplware.pt/pipplware/key.asc -O - | apt-key add
+#RUN apt-get update
 #&& apt-get upgrade -y
 ##
 ### install kodi     
-#RUN apt-get install -y kodi
+RUN apt-get install -y kodi
 ##
 ### copy repository file and activate sources and upgrade files
 #COPY /etc/apt/sources.list /etc/apt/sources.list
