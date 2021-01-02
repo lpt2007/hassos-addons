@@ -17,7 +17,7 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
 #&& apt-get upgrade -y
 ##
 ### install kodi     
-RUN apt-get install -y kodi
+#RUN apt-get install -y kodi
 ##
 ### copy repository file and activate sources and upgrade files
 #COPY /etc/apt/sources.list /etc/apt/sources.list
