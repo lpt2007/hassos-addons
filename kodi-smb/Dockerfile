@@ -8,6 +8,13 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
      wget \
      nano
 ##
+##
+### copy repository file and activate sources and upgrade files
+RUN echo "deb http://pipplware.pplware.pt/pipplware/dists/buster/main/binary /" >> /etc/apt/sources.list
+RUN wget http://pipplware.pplware.pt/pipplware/key.asc -O - | apt-key add
+RUN apt-get update
+#&& apt-get upgrade -y
+##
 ### install kodi     
 RUN apt-get install -y kodi
 ##
