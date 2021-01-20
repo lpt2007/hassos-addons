@@ -18,7 +18,7 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
 #RUN apt-get update && apt-get upgrade -y
 ##
 ### install kodi     
-RUN apt-get install -y kodi
+#RUN apt-get install -y kodi
 ##
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
@@ -42,7 +42,7 @@ LABEL \
     org.label-schema.description="KODI 18.7 with SMB rewrite" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="kodi_18_smb_dev" \
-    org.label-schema.schema-version="0.5.61" \
+    org.label-schema.schema-version="0.5.63" \
     org.label-schema.url="https://github.com/lpt2007/hassos-addons-dev/kodi-18-smb" \
     org.label-schema.usage="https://github.com/lpt2007/hassos-addons-dev/kodi-18-smb" \
     org.label-schema.vcs-ref=${BUILD_REF} \
