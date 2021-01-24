@@ -1,4 +1,4 @@
-FROM homeassistant/armv7-base-debian:bullseye
+FROM homeassistant/armv7-base-debian:buster
 #homeassistant/armv7-base-debian:bullseye 
 #homeassistant/armv7-base-debian:buster
 #homeassistant/armhf-base-raspbian:buster
@@ -21,7 +21,7 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
 RUN apt-get install -y kodi
 ##
 ##
-RUN apt-get install -y cec-utils
+#RUN apt-get install -y cec-utils
 ##
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
