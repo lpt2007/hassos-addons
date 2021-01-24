@@ -21,7 +21,7 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
 RUN apt-get install -y kodi
 ##
 ##
-RUN apt-get install -y cec-utils mesa*
+RUN apt-get install -y cec-utils
 ##
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
