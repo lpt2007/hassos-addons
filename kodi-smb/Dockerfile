@@ -1,4 +1,4 @@
-FROM homeassistant/armv7-base-debian:buster
+FROM b01t/raspbian:latest
 #homeassistant/armv7-base-debian:bullseye 
 #homeassistant/armv7-base-debian:buster
 #homeassistant/armhf-base-raspbian:buster
