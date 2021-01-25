@@ -1,15 +1,17 @@
-FROM b01t/raspbian:latest
+FROM homeassistant/armv7-base-debian:bullseye
 #homeassistant/armv7-base-debian:bullseye 
 #homeassistant/armv7-base-debian:buster
 #homeassistant/armhf-base-raspbian:buster
+#b01t/raspbian:latest
 ##
 MAINTAINER lpt2007 <mohyat@gmail.com>
 ##
 ### install minimal dependencies
 RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y \
      cifs-utils \
+     cec-utils \
      wget \
-     nano
+     nano 
 ##
 ##
 ### copy repository file and activate sources and upgrade files
@@ -19,9 +21,6 @@ RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y 
 ##
 ### install kodi     
 RUN apt-get install -y kodi
-##
-##
-#RUN apt-get install -y cec-utils
 ##
 ### enable tvservice
 #RUN apt-get update && apt-get install git build-essential cmake -y
