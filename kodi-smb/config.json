@@ -1,6 +1,6 @@
 {
   "name": "KODI 18.7 with SMB",
-  "version": "0.5.67",
+  "version": "0.5.68",
   "stage": "experimental",
   "slug": "kodi_18_smb_dev",
   "description": "KODI 18.7 media center with samba store add-on!",
@@ -8,7 +8,7 @@
   "webui": "http://[HOST]:[PORT:8080]/",
   "full_access": "true",
   "boot": "manual",
-  "arch": ["armhf", "armv7"],
+  "arch": ["armhf", "armv7", "amd64"],
   "startup": "application",
   "ports": {
     "8080/tcp": 8080
